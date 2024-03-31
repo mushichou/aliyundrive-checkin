@@ -27,7 +27,6 @@ def main():
     token = os.getenv('TOKEN')
     chat_id = os.getenv('CHAT_ID')
     sender = send.Send(token)
-    sender.tg_send(chat_id, 'hello')
     sender.tg_send(chat_id, message_all)
     print('finish')
 
