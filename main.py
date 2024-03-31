@@ -10,7 +10,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--token_string', type=str, required=True)
     args = parser.parse_args()
-    token = os.getenv('TOKEN_TG')
+    token = os.getenv('TOKEN')
     chat_id = os.getenv('CHAT_ID')
     token_string = args.token_string
     token_string = token_string.split(',')
