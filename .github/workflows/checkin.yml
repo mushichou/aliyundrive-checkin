@@ -10,6 +10,9 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      CHAT_ID: ${{secrets.CHAT_ID}}
+      TOKEN: ${{secrets.TOKEN}}
     steps:
       - name: Detection Code
         uses: actions/checkout@v4
