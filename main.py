@@ -24,7 +24,6 @@ def main():
         if idx < len(token_string) - 1:
             message_all.append('--')
 
-    title = '阿里云盘签到结果'
     message_all = '\n'.join(message_all)
     message_all = re.sub('\n+', '\n', message_all).rstrip('\n')
     sender = send.Send(token)
