@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CHAT_ID: ${{secrets.CHAT_ID}}
-      TOKEN: ${{secrets.TOKEN}}
+      TOKEN: ${{secrets.TOKEN_TG}}
     steps:
       - name: Detection Code
         uses: actions/checkout@v4
