@@ -10,8 +10,6 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--token_string', type=str, required=True)
     args = parser.parse_args()
-    token = os.getenv('TOKEN')
-    chat_id = os.getenv('CHAT_ID')
     token_string = args.token_string
     token_string = token_string.split(',')
     ali = Aliyundrive()
@@ -26,6 +24,8 @@ def main():
 
     message_all = '\n'.join(message_all)
     message_all = re.sub('\n+', '\n', message_all).rstrip('\n')
+    token = os.getenv('TOKEN')
+    chat_id = os.getenv('CHAT_ID')
     sender = send.Send(token)
     sender.tg_send(chat_id, 'hello')
     sender.tg_send(chat_id, message_all)
