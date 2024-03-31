@@ -27,7 +27,7 @@ def main():
     message_all = '\n'.join(message_all)
     message_all = re.sub('\n+', '\n', message_all).rstrip('\n')
     sender = send.Send(token)
-    sender.tg_send(chat_id, 'hello')
+    sender.tg_send(chat_id, message_all)
     print('finish')
 
 
